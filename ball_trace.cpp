@@ -58,7 +58,6 @@ int main(int argc, char** argv){
 	cv::createTrackbar("High S", window_detection_name, &high_S, max_value, on_high_S_thresh_trackbar);
 	cv::createTrackbar("Low V", window_detection_name, &low_V, max_value, on_low_V_thresh_trackbar);
 	cv::createTrackbar("High V", window_detection_name, &high_V, max_value, on_high_V_thresh_trackbar);
-
 	
 	//cv::VideoCapture capture(0);
 	cv::VideoCapture cap(-1);
