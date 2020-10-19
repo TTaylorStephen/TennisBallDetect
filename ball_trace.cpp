@@ -15,7 +15,6 @@ const cv::String window_detection_name = "Object Detection";
 int low_H = 0, low_S = 0, low_V = 0;
 int high_H = max_value_H, high_S = max_value, high_V = max_value;
 
-
 //slider bars used to tune the color thresholds
 static void on_low_H_thresh_trackbar(int, void *)
 {
@@ -70,6 +69,7 @@ int main(int argc, char** argv){
 	cv::Mat threshold[5];
 	cv::Mat frame_threshold;
 	cv::Mat slider;
+	
 	while(1){
 		
 		/* create image and blur */
@@ -109,9 +109,7 @@ int main(int argc, char** argv){
 			// std::cout<<circles<<std::endl;
 		}
 		
-	
-
-    cv::imshow(window_detection_name, mask);
+    		cv::imshow(window_detection_name, mask);
 		
 		/* creates, positions, and displays window */
 		cv::namedWindow("eyes", CV_WINDOW_NORMAL);
@@ -134,8 +132,7 @@ int main(int argc, char** argv){
 		cv::moveWindow("eyes4",1300,30);
 		cv::imshow("eyes4", mask);
 
-		cv::waitKey(1);
-		
+		cv::waitKey(1);	
 	}	
 }
 
